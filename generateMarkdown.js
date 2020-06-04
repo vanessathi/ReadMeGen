@@ -15,3 +15,35 @@ function fileCommand(runFile) {
     `)
 }
 
+function generateMarkdown(data) {
+    return (`
+
+## Project Title
+-------------------------
+${data.projectName}
+
+## Project Link
+-------------------------
+${createUrl(data.username, data.title)}
+
+## Contributors
+-------------------------
+${data.contribute}
+
+## Description
+-------------------------
+${data.description}
+
+## Installation Command
+-------------------------
+${data.fileCommand}
+
+## CONTACT
+-------------------------
+For questions and inquiries, please e-mail ${data.email}
+
+    `)
+}
+    
+module.exports = generateMarkdown;
+            
